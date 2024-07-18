@@ -31,12 +31,13 @@ const SearchContainer = () => {
                         type='search'
                         name='search'
                         defaultValue={search}
+                        labelText='Nhập tìm Kiếm'
                         onChange={debounce((form) => {
                             submit(form);
                         })}
                     />
                     <FormRowSelect
-                        labelText='job status'
+                        labelText='Trạng Thái Công Việc'
                         name='jobStatus'
                         list={['all', ...Object.values(JOB_STATUS)]}
                         defaultValue={jobStatus}
@@ -45,7 +46,7 @@ const SearchContainer = () => {
                         }}
                     />
                     <FormRowSelect
-                        labelText='job type'
+                        labelText='Loại Công Việc'
                         name='jobType'
                         defaultValue={jobType}
                         list={['all', ...Object.values(JOB_TYPE)]}
@@ -54,6 +55,7 @@ const SearchContainer = () => {
                         }}
                     />
                     <FormRowSelect
+                        labelText='Sắp xếp'
                         name='sort'
                         defaultValue={sort}
                         list={[...Object.values(JOB_SORT_BY)]}
