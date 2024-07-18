@@ -8,11 +8,11 @@ import { toast } from 'react-toastify';
 export const action = async ({ request }) => {
     const formData = await request.formData();
 
-    const file = formData.get('avatar');
-    if (file && file.size > 500000) {
-        toast.error('Kích thước hình ảnh quá lớn');
-        return null;
-    }
+    // const file = formData.get('avatar');
+    // if (file && file.size > 500000) {
+    //     toast.error('Kích thước hình ảnh quá lớn');
+    //     return null;
+    // }
 
     try {
         await customFetch.patch('/users/update-user', formData);
