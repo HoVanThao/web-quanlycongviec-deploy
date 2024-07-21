@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server",
+    "setup-production-app": "npm i && cd client && npm i && npm run build",
     "thao": "concurrently --kill-others-on-fail \"npm run start\" \"cd ../client && npm start\""
   },
   "keywords": [],
