@@ -23,23 +23,6 @@ export const action = async ({ request }) => {
     }
 };
 
-
-// export const action =
-//     (queryClient) =>
-//         async ({ request }) => {
-//             const formData = await request.formData();
-//             const data = Object.fromEntries(formData);
-//             try {
-//                 await axios.post('/api/v1/auth/login', data);
-//                 queryClient.invalidateQueries();
-//                 toast.success('Đăng nhập thành công');
-//                 return redirect('/dashboard');
-//             } catch (error) {
-//                 toast.error(error.response.data.msg);
-//                 return error;
-//             }
-//         };
-
 const Login = () => {
 
     const navigate = useNavigate();
